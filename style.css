@@ -51,32 +51,42 @@ body {
   background-size: cover;
 }
 
-.welcome__section > .container {
+.welcome__section > .container,
+.dream__section > .container {
   display: flex;
   flex-direction: column-reverse;
   text-align: center;
   gap: 1.25rem;
 }
 
-.welcome__title > h1 {
+.welcome__title > h1,
+.dream__title > h1 {
   font-size: clamp(2.45rem, 5vw + .5rem, 4rem);
   line-height: 1.2;
 }
 
-.welcome__title > h3 {
+.welcome__title > h3,
+.dream__title > h3 {
   font-size: 1.25rem;
   padding-top: .75rem;
 }
 
 /* ##### Media querries ##### */
 @media (min-width: 45em) {
-  .welcome__section > .container {
+  .welcome__section > .container,
+  .dream__section > .container {
     flex-direction: row;
     text-align: start;
     align-items: center;
+    gap: 3rem;
   }
 
-  .welcome__section .container > *{
+  .dream__section > .container {
+    flex-direction: row-reverse;
+  }
+
+  .welcome__section .container > *,
+  .dream__section .container > *{
     flex: 1;
   }
 }
